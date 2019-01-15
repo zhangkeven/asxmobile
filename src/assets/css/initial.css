@@ -1,0 +1,64 @@
+body,
+ul,
+ol,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+table,
+td,
+img,
+div {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-family: Microsoft YaHei;
+}
+
+body {
+	background: #fff;
+}
+
+ul,
+ol {
+	list-style-type: none;
+	font-family: Microsoft YaHei;
+}
+
+select,
+input,
+img,
+select {
+	vertical-align: middle;
+}
+
+p,
+span {
+	font-family: Microsoft YaHei;
+}
+
+a {
+	text-decoration: none;
+	color: #000;
+	font-family: Microsoft YaHei;
+}
+
+html {
+	font-family: Microsoft YaHei;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	margin-top: 2.8125rem;
+	width: 100%;
+}
+.bannerImg{
+	width: 100%;
+}
