@@ -5,7 +5,7 @@ import App from './App'
 import router from './router'
 import './assets/css/initial.css'
 import ElementUI from 'element-ui'
-import 'element-ui/lib/theme-chalk/index.css'
+import './assets/theme-chalk/index.css'
 Vue.use(ElementUI)
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 Vue.use(VueAwesomeSwiper);
