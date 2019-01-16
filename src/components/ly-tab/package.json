@@ -1,0 +1,68 @@
+{
+  "_args": [
+    [
+      "ly-tab@2.1.2",
+      "/Users/zhangkaiwen/Desktop/project/mobileasx"
+    ]
+  ],
+  "_from": "ly-tab@2.1.2",
+  "_id": "ly-tab@2.1.2",
+  "_inBundle": false,
+  "_integrity": "sha1-Bxw8W0fDT5Qr4BO3h6GSgtLZiHc=",
+  "_location": "/ly-tab",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "ly-tab@2.1.2",
+    "name": "ly-tab",
+    "escapedName": "ly-tab",
+    "rawSpec": "2.1.2",
+    "saveSpec": null,
+    "fetchSpec": "2.1.2"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/ly-tab/download/ly-tab-2.1.2.tgz",
+  "_spec": "2.1.2",
+  "_where": "/Users/zhangkaiwen/Desktop/project/mobileasx",
+  "author": {
+    "name": "ScoutYin",
+    "email": "yinbin_web@163.com"
+  },
+  "bugs": {
+    "url": "https://github.com/ScoutYin/ly-tab/issues"
+  },
+  "contributors": [
+    {
+      "name": "ScoutYin",
+      "email": "yinbin_web@163.com"
+    },
+    {
+      "name": "lyh2668",
+      "email": "lyh2668@163.com"
+    }
+  ],
+  "dependencies": {},
+  "description": "A better mobile touch-swappable reusable component for vue2.*",
+  "homepage": "https://github.com/ScoutYin/ly-tab#readme",
+  "keywords": [
+    "Vue",
+    "component",
+    "mobile",
+    "swap",
+    "reusable"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "ly-tab",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScoutYin/ly-tab.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "2.1.2"
+}

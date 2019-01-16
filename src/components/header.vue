@@ -31,8 +31,8 @@
 					</el-collapse-item>
 					<el-collapse-item title="料理教室" name="2">
 						<div class="menu-conet">
-							<p>0秒活力锅</p>
-							<p>全能平底锅</p>
+							<p @click="goRoom">0秒活力锅</p>
+							<p @click="goRoom">全能平底锅</p>
 						</div>
 					</el-collapse-item>
 					<div class="left-btn" @click="goShare">
@@ -40,11 +40,11 @@
 					</div>
 					<el-collapse-item title="关于我们" name="3">
 						<div class="menu-conet">
-							<p>公司简介</p>
-							<p>公司概要</p>
-							<p>历史事件</p>
-							<p>新闻中心</p>
-							<p>联系我们</p>
+							<p @click="goCompanyProfile">公司简介</p>
+							<p @click="goCompanyIntroduction">公司概要</p>
+							<p @click="goHistoricalEvents">历史事件</p>
+							<p @click="goNewCenter">新闻中心</p>
+							<p @click="goCallUs">联系我们</p>
 						</div>
 					</el-collapse-item>
 					<el-collapse-item title="我要购买" name="4">
@@ -85,6 +85,42 @@
 			goMain(){
 				this.$router.push({
 					name: 'Main',
+					params: {}
+				})
+			},
+			goRoom(){
+				this.$router.push({
+					name: 'Room',
+					params: {}
+				})
+			},
+			goCompanyProfile(){
+				this.$router.push({
+					name: 'CompanyProfile',
+					params: {}
+				})
+			},
+			goCompanyIntroduction(){
+				this.$router.push({
+					name: 'CompanyIntroduction',
+					params: {}
+				})
+			},
+			goHistoricalEvents(){
+				this.$router.push({
+					name: 'HistoricalEvents',
+					params: {}
+				})
+			},
+			goNewCenter(){
+				this.$router.push({
+					name: 'NewCenter',
+					params: {}
+				})
+			},
+			goCallUs(){
+				this.$router.push({
+					name: 'CallUs',
 					params: {}
 				})
 			},

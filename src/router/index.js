@@ -1,7 +1,12 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '@/pages/main'
-import About from '@/pages/about/about'
+import Room from '@/pages/room/room'
+import CompanyProfile from '@/pages/about/companyProfile'
+import CompanyIntroduction from '@/pages/about/companyIntroduction'
+import HistoricalEvents from '@/pages/about/historicalEvents'
+import NewCenter from '@/pages/about/newCenter'
+import CallUs from '@/pages/about/callUs'
 import Share from '@/pages/share/share'
 import Cart from '@/pages/cart/cart'
 import Person from '@/pages/personcenter/person'
@@ -13,32 +18,101 @@ export default new Router({
     {
       path: '/',
       name: 'Main',
-      component: Main
+      component: Main,
+			meta: {
+				title: "阿莎希",
+				content: 'disable'
+			}
     },
 		{
-		  path: '/About',
-		  name: 'About',
-		  component: About
+		  path: '/Room',
+		  name: 'Room',
+		  component: Room,
+			meta: {
+				title: "料理教室",
+				content: 'disable'
+			}
+		},
+		{
+		  path: '/CompanyProfile',
+		  name: 'CompanyProfile',
+		  component: CompanyProfile,
+			meta: {
+				title: "公司简介",
+				content: 'disable'
+			}
+		},
+		{
+		  path: '/CompanyIntroduction',
+		  name: 'CompanyIntroduction',
+		  component: CompanyIntroduction,
+			meta: {
+				title: "公司概要",
+				content: 'disable'
+			}
+		},
+		{
+		  path: '/HistoricalEvents',
+		  name: 'HistoricalEvents',
+		  component: HistoricalEvents,
+			meta: {
+				title: "历史事件",
+				content: 'disable'
+			}
+		},
+		{
+		  path: '/NewCenter',
+		  name: 'NewCenter',
+		  component: NewCenter,
+			meta: {
+				title: "新闻中心",
+				content: 'disable'
+			}
+		},
+		{
+		  path: '/CallUs',
+		  name: 'CallUs',
+		  component: CallUs,
+			meta: {
+				title: "联系我们",
+				content: 'disable'
+			}
 		},
 		{
 		  path: '/Share',
 		  name: 'Share',
-		  component: Share
+		  component: Share,
+			meta: {
+				title: "使用者分享",
+				content: 'disable'
+			}
 		},
 		{
 		  path: '/Cart',
 		  name: 'Cart',
-		  component: Cart
+		  component: Cart,
+			meta: {
+				title: "购物车",
+				content: 'disable'
+			}
 		},
 		{
 		  path: '/Person',
 		  name: 'Person',
-		  component: Share
+		  component: Share,
+			meta: {
+				title: "个人中心",
+				content: 'disable'
+			}
 		},
 		{
 		  path: '/Recommend',
 		  name: 'Recommend',
-		  component: Share
+		  component: Recommend,
+			meta: {
+				title: "推荐专栏",
+				content: 'disable'
+			}
 		},
   ]
 })

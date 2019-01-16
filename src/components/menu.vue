@@ -1,7 +1,7 @@
 <template>
 	<div id="nav-main">
 		<div class="showMenu" :style="showModal">
-			<img src="../assets/img/shouye.png" alt="">
+			<img src="../assets/img/shouye.png" alt="" @click="goMain">
 			<img src="../assets/img/cart1.png" alt="">
 			<img src="../assets/img/kefu.png" alt="">
 			<img src="../assets/img/mine1.png" alt="">
@@ -29,6 +29,12 @@
 			hideMenu(){
 				this.showModal='visibility:visible';
 				this.hideModal='visibility:hidden';
+			},
+			goMain(){
+				this.$router.push({
+					name: 'Main',
+					params: {}
+				})
 			}
 		},
 	}

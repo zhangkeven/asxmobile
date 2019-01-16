@@ -2,8 +2,8 @@
 	<div>
 		<Header />
 		<Menu></Menu>
-		<div id="recommend-main" class="main">
-		<div class="swiper-container" id="recommedContainer" style="width: 100%;">
+		<div id="callUs" class="main">
+		<div class="swiper-container" id="callUsContainer" style="width: 100%;">
 			<div class="swiper-wrapper">
 				<div class="swiper-slide" v-for="(item,index) in imgs" :key="index">
 					<img class="bannerImg" src="../../assets/img/banner3.png" alt="">
@@ -19,7 +19,6 @@
 		<ly-tab :items="items" v-model="selectid">
 			
 		</ly-tab>
-		
 		</div>
 		
 		<Bottom></Bottom>
@@ -69,7 +68,7 @@
 			console.log(this.selectid);
 		},
 		mounted(){
-			new Swiper('#recommedContainer', {
+			new Swiper('#callUsContainer', {
 				autoplay: true,
 				speed: 300,
 				// autoplayDisableOnInteraction:true,

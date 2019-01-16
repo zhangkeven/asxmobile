@@ -39,13 +39,13 @@
 				<p @click="goAbout">查看更多>></p>
 			</div>
 			<div class="line">
-			
+
 			</div>
 			<p class="text-ch">菜谱</p>
 			<p class="text-eh">Recipes</p>
 			<recipes :list="recipesList"></recipes>
 			<div class="line">
-			
+
 			</div>
 			<p class="text-ch">使用心得</p>
 			<p class="text-eh">Customer reviews</p>
@@ -59,7 +59,7 @@
 				</div>
 			</div>
 			<div class="line">
-			
+
 			</div>
 			<p class="text-ch">新闻中心</p>
 			<p class="text-eh">News center</p>
@@ -83,8 +83,8 @@
 						</div>
 					</div>
 				</div>
-				
-	
+
+
 			</div>
 		</div>
 		<Bottom></Bottom>
@@ -104,34 +104,28 @@
 		},
 		data() {
 			return {
-				chooseId:0,
+				chooseId: 0,
 				selectedId: 0,
 				items: [{
-						label: '首页'
+						label: '全部'
 					},
 					{
-						label: '推荐'
+						label: '新手必学'
 					},
 					{
-						label: 'Android'
+						label: '健康食谱'
 					},
 					{
-						label: '前端'
+						label: '料理达人'
 					},
 					{
-						label: '后端'
+						label: '罗杰塔'
 					},
 					{
-						label: 'iOS'
+						label: '涛妈'
 					},
 					{
-						label: '产品'
-					},
-					{
-						label: '人工智能'
-					},
-					{
-						label: '设计'
+						label: '营养师'
 					}
 				],
 				options: {
@@ -139,7 +133,7 @@
 					// 可在这里指定labelKey为你数据里文字对应的字段名
 				},
 				imgs: ['', '', '', ''],
-				recommendList: ['','','',''],
+				recommendList: ['', '', '', ''],
 				potList: [{
 					img: 'http://www.kevenzhang.com/static/img/huoliguo.a9fc4ea.png',
 					title: '活力锅介绍'
@@ -147,22 +141,34 @@
 					img: 'http://www.kevenzhang.com/static/img/guo2.b142f75.png',
 					title: '活力锅介绍'
 				}, ],
-				recipesList:[{status:1},{status:0},{status:1},{status:1},{status:0},{status:1},]
+				recipesList: [{
+					status: 1
+				}, {
+					status: 0
+				}, {
+					status: 1
+				}, {
+					status: 1
+				}, {
+					status: 0
+				}, {
+					status: 1
+				}, ]
 			};
 		},
 		methods: {
 			onSwipeLeft() {},
-			goAbout(){
+			goAbout() {
 				this.$router.push({
 					name: 'About',
 					params: {}
 				})
 			},
-			choosetype(index){
-				if(this.chooseId==index){
-					
-				}else{
-					this.chooseId=index;
+			choosetype(index) {
+				if (this.chooseId == index) {
+
+				} else {
+					this.chooseId = index;
 				}
 			}
 		},
@@ -198,11 +204,12 @@
 <style lang="scss" scoped>
 	#main {
 		.conent {
-			div.line{
+			div.line {
 				width: 100%;
 				height: 0.375rem;
 				background-color: #F4F4F4
 			}
+
 			p.text-ch {
 				width: 100%;
 				text-align: center;
@@ -231,23 +238,27 @@
 					width: 92%;
 				}
 			}
-			div.about-us-bg{
+
+			div.about-us-bg {
 				width: 92%;
-				padding:0 4%;
+				padding: 0 4%;
 				padding-bottom: 1.25rem;
 				display: flex;
 				flex-direction: column;
-				img{
+
+				img {
 					width: 100%;
 				}
-				p{
+
+				p {
 					width: 100%;
 					font-size: 0.875rem;
 					color: #666666;
 					line-height: 150%;
 					margin-top: 0.8125rem;
 				}
-				p:last-child{
+
+				p:last-child {
 					color: #DF4557;
 					font-size: 0.75rem;
 					cursor: pointer;
@@ -256,22 +267,26 @@
 					padding-right: 4%;
 				}
 			}
-			div.use-bg{
+
+			div.use-bg {
 				width: 92%;
-				padding:0 4%;
+				padding: 0 4%;
 				display: flex;
 				flex-flow: row wrap;
 				justify-content: space-between;
-				.use-list{
+
+				.use-list {
 					width: 49%;
 					display: flex;
-					flex-flow:column nowrap;
+					flex-flow: column nowrap;
 					position: relative;
-					margin-bottom:0.625rem;
-					img{
+					margin-bottom: 0.625rem;
+
+					img {
 						width: 100%;
 					}
-					div{
+
+					div {
 						width: 100%;
 						position: absolute;
 						bottom: 0;
@@ -280,15 +295,17 @@
 						display: flex;
 						flex-direction: column;
 						min-height: 4.3125rem;
-						p:first-child{
+
+						p:first-child {
 							width: 96%;
-							padding:0.3125rem 2%;
+							padding: 0.3125rem 2%;
 							color: #101010;
 							font-size: 0.875rem;
 						}
-						p:last-child{
+
+						p:last-child {
 							width: 96%;
-							padding:0 2%;
+							padding: 0 2%;
 							padding-bottom: 0.3125rem;
 							color: #333333;
 							font-size: 0.75rem;
@@ -296,53 +313,61 @@
 					}
 				}
 			}
-			div.media-bg{
+
+			div.media-bg {
 				width: 100%;
 				display: flex;
 				flex-direction: column;
 				align-items: center;
 				margin-top: 0.625rem;
-				div.media-btn{
+
+				div.media-btn {
 					width: 80%;
-					padding:0 10%;
-					display:flex;
-					flex-direction:row;
-					align-items:center;
-					justify-content:space-between;
-					p.chooseBtn{
+					padding: 0 10%;
+					display: flex;
+					flex-direction: row;
+					align-items: center;
+					justify-content: space-between;
+
+					p.chooseBtn {
 						width: 37%;
 						text-align: center;
 						font-size: 0.875rem;
 						color: #666;
-						border:0.0625rem solid #333333;
-						padding:0.4rem 0;
+						border: 0.0625rem solid #333333;
+						padding: 0.4rem 0;
 						cursor: pointer;
 					}
-					p.activeBtn{
+
+					p.activeBtn {
 						width: 37%;
 						text-align: center;
 						font-size: 0.875rem;
-						border:0.0625rem solid #852833;
+						border: 0.0625rem solid #852833;
 						color: #852833;
-						padding:0.4rem 0;
+						padding: 0.4rem 0;
 						cursor: pointer;
 					}
 				}
-				div.media-list-bg{
+
+				div.media-list-bg {
 					margin-top: 0.875rem;
 					width: 100%;
 					display: flex;
 					flex-direction: column;
 					margin-bottom: 2.875rem;
-					div.media-img{
+
+					div.media-img {
 						width: 100%;
-						position:relative;
-						img{
+						position: relative;
+
+						img {
 							width: 100%;
 						}
-						div{
+
+						div {
 							width: 95%;
-							padding:0.5rem 2.5%;
+							padding: 0.5rem 2.5%;
 							background-color: rgba(235, 235, 235, .5);
 							position: absolute;
 							bottom: 0;
@@ -350,37 +375,44 @@
 							display: flex;
 							flex-direction: column;
 							align-items: center;
-							p{
+
+							p {
 								width: auto;
 							}
-							p:first-child{
+
+							p:first-child {
 								color: #666666;
 								font-size: 0.875rem;
 								margin-bottom: 0.3125rem;
 							}
-							p:last-child{
+
+							p:last-child {
 								color: #999999;
 								font-size: 0.75rem;
 							}
 						}
 					}
-					div.information-list{
+
+					div.information-list {
 						width: 92%;
-						padding:0 4%;
-						.information-bg{
+						padding: 0 4%;
+
+						.information-bg {
 							width: 100%;
 							display: flex;
 							flex-direction: column;
-							border-bottom:0.0625rem solid #BBBBBB;
-							padding-top:0.625rem;
-							padding-bottom:0.875rem;
-							p:first-child{
+							border-bottom: 0.0625rem solid #BBBBBB;
+							padding-top: 0.625rem;
+							padding-bottom: 0.875rem;
+
+							p:first-child {
 								color: #999999;
 								font-size: 0.75rem;
 								text-align: left;
 								margin-bottom: 0.125rem;
 							}
-							p:last-child{
+
+							p:last-child {
 								color: #666666;
 								font-size: 0.875rem;
 								text-align: left;

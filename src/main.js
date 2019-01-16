@@ -15,12 +15,14 @@ import VueTouch from 'vue-touch'       
 Vue.use(VueTouch, {name: 'v-touch'}) 
 VueTouch.config.swipe = {             threshold: 100 ,//手指左右滑动距离        
 }
-import LyTab from './components/go-shop';
-Vue.use(LyTab);
+import GoShop from './components/go-shop';
+Vue.use(GoShop);
 import expertTips from './components/expertTips';
 Vue.use(expertTips);
 import recipes from './components/recipes';
 Vue.use(recipes);
+import LyTab from './components/ly-tab';
+Vue.use(LyTab);
 // require('swiper/dist/css/swiper.css')
 /* eslint-disable no-new */
 new Vue({
