@@ -3,6 +3,7 @@
   <ly-tabbar
     v-model="selectedId"
     v-bind="options"
+		ref="data"
   >
     <ly-tab-item
       v-for="(item, index) in items"
@@ -24,13 +25,14 @@ import LyTabbar from './tabbar'
 import LyTabItem from './tab-item'
 
 export default {
-  name: 'LyTab',
+  name: 'recipes',
   components: {
     LyTabbar,
     LyTabItem
   },
   props: {
-    value: {
+    list:Array,
+		value: {
       type: Number,
       default: 0
     },
@@ -49,7 +51,7 @@ export default {
   },
   data () {
     return {
-      selectedId: this.value
+      selectedId: this.value,
     }
   },
   computed: {
@@ -65,7 +67,11 @@ export default {
       this.$emit('input', value)
       this.$emit('change', this.items[value], value)
     }
-  }
+  },
+	mounted(){
+		this.$refs.data.list=this.list;
+	}
+	
 }
 </script>
 

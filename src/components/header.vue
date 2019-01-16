@@ -5,7 +5,7 @@
 				<img src="../assets/img/line.png" alt="">
 			</div>
 			<div class="head-title">
-				<p>标题</p>
+				<p>阿萨西</p>
 			</div>
 			<div class="right-icon">
 				<img src="../assets/img/mine.png" alt="" @click="goPerson">

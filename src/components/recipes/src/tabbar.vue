@@ -5,19 +5,15 @@
     <div class="ly-tab-list"
          :style="style"
          ref="list">
-      <div style="width: 9.1875rem;height: 100px;background-color: red;margin-right: 0.625rem;">
-				1
-			</div>
-			<div style="width: 9.1875rem;height: 100px;background-color: black;margin-right: 0.625rem;">
-				1
-			</div>
-			<div style="width: 9.1875rem;height: 100px;background-color: pink;text-align: right;">
-				2
-			</div>
-	
-<!-- <div style="width: 3.125rem;height: 100px;background-color: #FFFFFF">
-				
-			</div> -->
+     <div class="recommend-list" v-for="(item,index) in list" :key="index">
+			 <img src="../../../assets/img/hongdou.png" alt="" v-if="item.status==0">
+			<div v-if="item.status==1">
+				 <img class="bgImg" src="../../../assets/img/hongdou.png" alt="">
+				 <img class="palyvideo" src="../../../assets/img/play.png" alt="">
+			 </div>
+			 <p>红豆饭</p>
+			 <p>红豆饭在日本常作为年......</p>
+		 </div>
     </div>
   </div>
 </template>
@@ -93,6 +89,7 @@ export default {
       inertiaFrame: 0,
       zeroSpeed: 0.001, // 当speed绝对值小于该值时认为速度为0 (可用于控制惯性滚动结束期的顺滑度)
       acceleration: 0, // 惯性滑动加速度;
+			list:[]
     }
   },
 
@@ -312,7 +309,260 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss" scoped>
+@media screen and (max-width:320px){
+	.recommend-list{
+		width: 9rem;
+		height: auto;
+		background-color: rgba(255, 255, 255, 1);
+		border: 0.0625rem solid rgba(236, 236, 236, 1);
+		display: flex;
+		flex-direction: column;
+		margin-right: 0.375rem;
+		margin-bottom: 1.25rem;
+		img{
+			width: 100%;
+			border-radius: 0.625rem;
+		}
+		p{
+			width: 96%;
+			text-align: left;
+			padding:0.625rem 2%;
+			font-size: 0.875rem;
+			color: #333;
+		}
+		div{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			.bgImg{
+				width: 100%;
+			}
+			.palyvideo{
+				width: 20%;
+				position: absolute;
+				bottom:35%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		}
+	}
+}
+@media screen and (min-width:321px) and (max-width:375px){
+	.recommend-list{
+		width: 10.5625rem;
+		height: auto;
+		background-color: rgba(255, 255, 255, 1);
+		border: 0.0625rem solid rgba(236, 236, 236, 1);
+		display: flex;
+		flex-direction: column;
+		margin-right: 0.375rem;
+		margin-bottom: 1.25rem;
+		div{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			.bgImg{
+				width: 100%;
+			}
+			.palyvideo{
+				width: 20%;
+				position: absolute;
+				bottom:35%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		}
+		img{
+			width: 100%;
+			border-radius: 0.625rem;
+		}
+		p{
+		width: 96%;
+		text-align: left;
+		padding:0.625rem 2%;
+		font-size: 0.875rem;
+		color: #333;
+		}
+		p:last-child{
+			width: 96%;
+			text-align: left;
+			padding:0 2%;
+			font-size: 0.75rem;
+			color: #666;
+		}
+	}
+}
+@media screen and (min-width:376px) and (max-width:414px){
+	.recommend-list{
+		width: 11.625rem;
+		height: auto;
+		background-color: rgba(255, 255, 255, 1);
+		border: 0.0625rem solid rgba(236, 236, 236, 1);
+		display: flex;
+		flex-direction: column;
+		margin-right: 0.375rem;
+		margin-bottom: 1.25rem;
+		img{
+			width: 100%;
+			border-radius: 0.625rem;
+		}
+		p{
+			width: 96%;
+			text-align: left;
+			padding:0.625rem 2%;
+			font-size: 0.875rem;
+			color: #333;
+		}
+		div{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			.bgImg{
+				width: 100%;
+			}
+			.palyvideo{
+				width: 20%;
+				position: absolute;
+				bottom:35%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		}
+	}
+}
+@media screen and (min-width:415px) and (max-width:768px){
+	.recommend-list{
+		width: 21.625rem;
+		height: auto;
+		background-color: rgba(255, 255, 255, 1);
+		border: 0.0625rem solid rgba(236, 236, 236, 1);
+		display: flex;
+		flex-direction: column;
+		margin-right: 0.375rem;
+		margin-bottom: 1.25rem;
+		img{
+			width: 100%;
+			border-radius: 0.625rem;
+		}
+		p{
+			width: 96%;
+			text-align: left;
+			padding:0.625rem 2%;
+			font-size: 0.875rem;
+			color: #333;
+		}
+		div{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			.bgImg{
+				width: 100%;
+			}
+			.palyvideo{
+				width: 20%;
+				position: absolute;
+				bottom:35%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		}
+	}
+}
+@media screen and (min-width:769px) and (max-width:1024px){
+	.recommend-list{
+		width: 28.75rem;
+		height: auto;
+		background-color: rgba(255, 255, 255, 1);
+		border: 0.0625rem solid rgba(236, 236, 236, 1);
+		display: flex;
+		flex-direction: column;
+		margin-right: 0.375rem;
+		margin-bottom: 1.25rem;
+		img{
+			width: 100%;
+			border-radius: 0.625rem;
+		}
+		p{
+			width: 96%;
+			text-align: left;
+			padding:0.625rem 2%;
+			font-size: 0.875rem;
+			color: #333;
+		}
+		div{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			.bgImg{
+				width: 100%;
+			}
+			.palyvideo{
+				width: 20%;
+				position: absolute;
+				bottom:35%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		}
+	}
+}
+@media screen and (min-width:1025px){
+	.recommend-list{
+		width: 35rem;
+		height: auto;
+		background-color: rgba(255, 255, 255, 1);
+		border: 0.0625rem solid rgba(236, 236, 236, 1);
+		display: flex;
+		flex-direction: column;
+		margin-right: 0.375rem;
+		margin-bottom: 1.25rem;
+		img{
+			width: 100%;
+			border-radius: 0.625rem;
+		}
+		p{
+			width: 96%;
+			text-align: left;
+			padding:0.625rem 2%;
+			font-size: 0.875rem;
+			color: #333;
+		}
+		div{
+			width: 100%;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			position: relative;
+			.bgImg{
+				width: 100%;
+			}
+			.palyvideo{
+				width: 20%;
+				position: absolute;
+				bottom:35%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+			}
+		}
+	}
+}
 .ly-tabbar {
   position: relative;
   background-color: rgba(255 ,255, 255, .8);

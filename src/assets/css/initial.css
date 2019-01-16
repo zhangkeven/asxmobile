@@ -18,7 +18,7 @@ div {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-family: Microsoft YaHei;
+	font-family: PingFangSC-regular;
 }
 
 body {
@@ -28,7 +28,7 @@ body {
 ul,
 ol {
 	list-style-type: none;
-	font-family: Microsoft YaHei;
+	font-family: PingFangSC-regular;
 }
 
 select,
@@ -40,17 +40,17 @@ select {
 
 p,
 span {
-	font-family: Microsoft YaHei;
+	font-family: PingFangSC-regular;
 }
 
 a {
 	text-decoration: none;
 	color: #000;
-	font-family: Microsoft YaHei;
+	font-family: PingFangSC-regular;
 }
 
 html {
-	font-family: Microsoft YaHei;
+	font-family: PingFangSC-regular;
 }
 
 .main {
