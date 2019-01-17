@@ -9,11 +9,13 @@ import './assets/theme-chalk/index.css'
 Vue.use(ElementUI)
 import VueAwesomeSwiper from 'vue-awesome-swiper';
 Vue.use(VueAwesomeSwiper);
+import VueMeta from 'vue-meta'
+Vue.use(VueMeta)
 import './assets/css/swiper.min.css';
 import './assets/js/swiper.js'
-import VueTouch from 'vue-touch'        
+import VueTouch from 'vue-touch'       
 Vue.use(VueTouch, {name: 'v-touch'}) 
-VueTouch.config.swipe = {             threshold: 100 ,//手指左右滑动距离        
+VueTouch.config.swipe = {             threshold: 100 ,//手指左右滑动距离       
 }
 import GoShop from './components/go-shop';
 Vue.use(GoShop);

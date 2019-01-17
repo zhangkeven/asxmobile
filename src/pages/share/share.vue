@@ -45,94 +45,105 @@
 </template>
 
 <script>
-	import Swiper from 'swiper';
-	import Header from '../../components/header';
-	import Bottom from '../../components/bottom';
-	import Menu from '../../components/menu';
-	export default {
-		components: {
-			Header,
-			Bottom,
-			Menu
-		},
-		data() {
-			return {
-					imgs: ['', '', '', ''],
-					selectid:0,
-					items: [{
-						label: '0秒活力锅'
-					},
-					{
-						label: '全能平底锅'
-					},
-					{
-						label: '节能省水'
-					},
-					
-				],
-				list:['','','','','']
-			};
-		},
-		updated(){
-			console.log(this.selectid);
-		},
-		mounted(){
-			new Swiper('#shareContainer', {
-				autoplay: true,
-				speed: 300,
-				// autoplayDisableOnInteraction:true,
-				loopAdditionalSlides: 1,
-				paginationClickable: true,
-				touchReleaseOnEdges: true,
-				loop: true,
-				// 如果需要分页器
-				// 如果需要分页器
-				pagination: {
-					el: '.swiper-pagination'
+import Swiper from 'swiper';
+import Header from '../../components/header';
+import Bottom from '../../components/bottom';
+import Menu from '../../components/menu';
+export default {
+	components: {
+		Header,
+		Bottom,
+		Menu
+	},
+	data() {
+		return {
+			imgs: ['', '', '', ''],
+			selectid: 0,
+			myTitle:'使用者分享',
+			items: [
+				{
+					label: '0秒活力锅'
 				},
-				paginationType: 'bullets',
-				paginationHide: false,
-				paginationElement: 'li',
-				// grabCursor:true,
-				paginationVisibleClass: 'my-visible-switch'
-				// 如果需要前进后退按钮
-				// nextButton: '.swiper-button-next',
-				// prevButton: '.swiper-button-prev',
-				// 如果需要滚动条
-				// scrollbar: '.swiper-scrollbar',
-			});
+				{
+					label: '全能平底锅'
+				},
+				{
+					label: '节能省水'
+				}
+			],
+			list: ['', '', '', '', '']
+		};
+	},
+	 metaInfo (){
+		return{
+			titleTemplate: this.myTitle,
+			htmlAttrs: {
+				lang: 'zh'
+			},
+			
+			meta: [{  name: 'keywords' ,content:this.myTitle}],
 		}
+	},
+	updated() {
+		console.log(this.selectid);
+	},
+	mounted() {
+		new Swiper('#shareContainer', {
+			autoplay: true,
+			speed: 300,
+			// autoplayDisableOnInteraction:true,
+			loopAdditionalSlides: 1,
+			paginationClickable: true,
+			touchReleaseOnEdges: true,
+			loop: true,
+			// 如果需要分页器
+			// 如果需要分页器
+			pagination: {
+				el: '.swiper-pagination'
+			},
+			paginationType: 'bullets',
+			paginationHide: false,
+			paginationElement: 'li',
+			// grabCursor:true,
+			paginationVisibleClass: 'my-visible-switch'
+			// 如果需要前进后退按钮
+			// nextButton: '.swiper-button-next',
+			// prevButton: '.swiper-button-prev',
+			// 如果需要滚动条
+			// scrollbar: '.swiper-scrollbar',
+		});
 	}
+};
 </script>
 
 <style lang="scss" scoped>
-#share{
-	div.share-list-bg{
-		div.share-list{
+#share {
+	div.share-list-bg {
+		div.share-list {
 			width: 92%;
-			padding:0.625rem 4%;
-			border: 0.0625rem solid #F4F4F4;
-			div.user{
+			padding: 0.625rem 4%;
+			border: 0.0625rem solid #f4f4f4;
+			div.user {
 				width: 100%;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
-				p.userName{
+				p.userName {
 					width: 84%;
 					color: #101010;
 					font-size: 1rem;
 				}
-				div.left-icon{
+				div.left-icon {
 					width: 12%;
-					display:flex;
+					display: flex;
 					flex-direction: row;
-					div.img-bg{
+					div.img-bg {
 						width: 100%;
 						height: 0;
 						padding-bottom: 100%;
 						position: relative;
-						img{
+						img {
 							position: absolute;
 							left: 0;
 							top: 0;
@@ -143,22 +154,21 @@
 					}
 				}
 			}
-			div.share-conet{
+			div.share-conet {
 				width: 100%;
 				display: flex;
 				flex-direction: column;
-				p:first-child{
-					padding:0.625rem 0;
+				p:first-child {
+					padding: 0.625rem 0;
 					color: #666666;
 					font-size: 1rem;
 				}
-				p:last-child{
+				p:last-child {
 					color: #999999;
 					font-size: 0.75rem;
 					line-height: 150%;
 				}
 			}
-			
 		}
 	}
 	div.add-list {
@@ -167,7 +177,7 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: center;
-		margin-top:3.9375rem;
+		margin-top: 3.9375rem;
 		margin-bottom: 1.25rem;
 		p {
 			width: 21%;

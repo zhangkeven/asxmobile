@@ -53,6 +53,7 @@
 		data() {
 			return {
 				imgs: ['', '', '', ''],
+				myTitle:'料理教室',
 				foodList: [{
 					status: 0
 				}, {
@@ -91,6 +92,16 @@
 					}
 				],
 			};
+		},
+		 metaInfo (){
+			return{
+				titleTemplate: this.myTitle,
+				htmlAttrs: {
+					lang: 'zh'
+				},
+				
+				meta: [{  name: 'keywords' ,content:this.myTitle}],
+			}
 		},
 		updated() {
 			console.log(this.selectid);
