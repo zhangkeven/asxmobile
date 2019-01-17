@@ -3,24 +3,22 @@
 		<Header />
 		<Menu></Menu>
 		<div id="Introduction" class="main">
-		<div class="swiper-container" id="IntroductionContainer" style="width: 100%;">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide" v-for="(item,index) in imgs" :key="index">
-					<img class="bannerImg" src="../../assets/img/banner3.png" alt="">
+			<div class="swiper-container" id="IntroductionContainer" style="width: 100%;">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" v-for="(item,index) in imgs" :key="index">
+						<img class="bannerImg" src="../../assets/img/banner3.png" alt="">
+					</div>
 				</div>
+				<!-- 如果需要分页器 -->
+				<div class="swiper-pagination" id="swiper-pagination"></div>
+
+				<!-- 如果需要导航按钮 -->
+				<!--<div class="swiper-button-prev swiper-button-white"></div>-->
+				<!--<div class="swiper-button-next swiper-button-white"></div>-->
 			</div>
-			<!-- 如果需要分页器 -->
-			<div class="swiper-pagination" id="swiper-pagination"></div>
-		
-			<!-- 如果需要导航按钮 -->
-			<!--<div class="swiper-button-prev swiper-button-white"></div>-->
-			<!--<div class="swiper-button-next swiper-button-white"></div>-->
-		</div>	
-		<ly-tab :items="items" v-model="selectid">
 			
-		</ly-tab>
 		</div>
-		
+
 		<Bottom></Bottom>
 	</div>
 </template>
@@ -38,9 +36,9 @@
 		},
 		data() {
 			return {
-					imgs: ['', '', '', ''],
-					selectid:0,
-					items: [{
+				imgs: ['', '', '', ''],
+				selectid: 0,
+				items: [{
 						label: '全部'
 					},
 					{
@@ -64,10 +62,10 @@
 				],
 			};
 		},
-		updated(){
+		updated() {
 			console.log(this.selectid);
 		},
-		mounted(){
+		mounted() {
 			new Swiper('#IntroductionContainer', {
 				autoplay: true,
 				speed: 300,

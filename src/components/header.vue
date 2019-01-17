@@ -5,7 +5,7 @@
 				<img src="../assets/img/line.png" alt="">
 			</div>
 			<div class="head-title">
-				<p>阿萨西</p>
+				<p>阿莎希</p>
 			</div>
 			<div class="right-icon">
 				<img src="../assets/img/mine.png" alt="" @click="goPerson">
@@ -23,7 +23,7 @@
 					</div>
 					<el-collapse-item title="明星产品" name="1">
 						<div class="menu-conet">
-							<p>0秒活力锅</p>
+							<p @click="goStart">0秒活力锅</p>
 							<p>全能平底锅</p>
 							<p>梦幻公主锅</p>
 							<p>天使锅</p>
@@ -85,6 +85,12 @@
 			goMain(){
 				this.$router.push({
 					name: 'Main',
+					params: {}
+				})
+			},
+			goStart(){
+				this.$router.push({
+					name: 'StartProduct',
 					params: {}
 				})
 			},

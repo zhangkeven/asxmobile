@@ -16,9 +16,6 @@
 				<!--<div class="swiper-button-prev swiper-button-white"></div>-->
 				<!--<div class="swiper-button-next swiper-button-white"></div>-->
 			</div>
-			<ly-tab :items="items" v-model="selectid">
-
-			</ly-tab>
 			<div class="media-bg">
 				<p class="text-ch">新闻中心</p>
 				<p class="text-eh">ASAHI NABE</p>

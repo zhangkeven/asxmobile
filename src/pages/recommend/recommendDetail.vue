@@ -2,23 +2,29 @@
 	<div>
 		<Header />
 		<Menu></Menu>
-		<div id="recommend-main" class="main">
-			<div class="swiper-container" id="recommedContainer" style="width: 100%;">
-				<div class="swiper-wrapper">
-					<div class="swiper-slide" v-for="(item,index) in imgs" :key="index">
-						<img class="bannerImg" src="../../assets/img/banner3.png" alt="">
-					</div>
+		<div id="recommendDetial-main" class="main">
+		<div class="swiper-container" id="recommedDetialContainer" style="width: 100%;">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" v-for="(item,index) in imgs" :key="index">
+					<img class="bannerImg" src="../../assets/img/banner3.png" alt="">
 				</div>
-				<!-- 如果需要分页器 -->
-				<div class="swiper-pagination" id="swiper-pagination"></div>
-
-				<!-- 如果需要导航按钮 -->
-				<!--<div class="swiper-button-prev swiper-button-white"></div>-->
-				<!--<div class="swiper-button-next swiper-button-white"></div>-->
 			</div>
-			<ly-tab :items="items" v-model="selectid">
-
-			</ly-tab>
+			<!-- 如果需要分页器 -->
+			<div class="swiper-pagination" id="swiper-pagination"></div>
+		
+			<!-- 如果需要导航按钮 -->
+			<!--<div class="swiper-button-prev swiper-button-white"></div>-->
+			<!--<div class="swiper-button-next swiper-button-white"></div>-->
+		</div>	
+		<ly-tab :items="items" v-model="selectid">
+			
+		</ly-tab>
+		<div class="recommendDetial-connet">
+			<p>营养师：「高压锅的高温高压烹煮，让高纤食材更好入口。」</p>
+			<p>2018-09-10</p>
+		</div>
+		<div class="bottom-list-bg">
+			<p class="recommend-title">推荐专栏</p>
 			<div class="recommend-conent">
 				<div class="recommend-list" v-for="(item,index) in list" :key="index" @click="goRecommendDetail">
 					<img src="../../assets/img/douya.png" alt="">
@@ -30,11 +36,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="add-list">
-				<p>加载更多</p>
-			</div>
 		</div>
-
+		</div>
+		
 		<Bottom></Bottom>
 	</div>
 </template>
@@ -52,10 +56,10 @@
 		},
 		data() {
 			return {
-				list: ['', '', ''],
-				imgs: ['', '', '', ''],
-				selectid: 0,
-				items: [{
+					imgs: ['', '', '', ''],
+					list: ['', '', ''],
+					selectid:0,
+					items: [{
 						label: '全部'
 					},
 					{
@@ -79,6 +83,9 @@
 				],
 			};
 		},
+		updated(){
+			console.log(this.selectid);
+		},
 		methods: {
 			goRecommendDetail(){
 				this.$router.push({
@@ -87,11 +94,8 @@
 				})
 			}
 		},
-		updated() {
-			console.log(this.selectid);
-		},
-		mounted() {
-			new Swiper('#recommedContainer', {
+		mounted(){
+			new Swiper('#recommedDetialContainer', {
 				autoplay: true,
 				speed: 300,
 				// autoplayDisableOnInteraction:true,
@@ -120,31 +124,56 @@
 </script>
 
 <style lang="scss" scoped>
-	#recommend-main {
+#recommendDetial-main{
+	.recommendDetial-connet{
+		width: 92%;
+		padding:0.625rem 4%;
+		p:first-child{
+			width: 100%;
+			margin-bottom:0.1875rem;
+			line-height: 150%;
+			color: #101010;
+			font-size: 1.125rem;
+		}
+		p:nth-child(2){
+			width: 100%;
+			color: #999999;
+			font-size: 0.75rem;
+			margin-bottom: 0.75rem;
+		}
+	}
+	.bottom-list-bg{
+		width: 92%;
+		padding:0.625rem 4%;
+		p.recommend-title{
+			color: #101010;
+			border-left:0.125rem solid #852833;
+			padding:0.3rem 1.25rem;
+			margin:0.625rem 0;
+		}
 		div.recommend-conent {
 			width: 100%;
 			background-color: #F4F4F4;
-
+		
 			div.recommend-list {
-				width: 92%;
-				padding: 0 4%;
+				width: 100%;
 				display: flex;
 				flex-direction: column;
 				background-color: #FFFFFF;
 				margin-bottom: 0.75rem;
-
+		
 				img {
 					width: 100%;
 					border-radius: 0.625rem;
 				}
-
+		
 				p:nth-child(2) {
 					width: 100%;
 					color: #333333;
 					font-size: 1rem;
 					padding: 0.625rem 0;
 				}
-
+		
 				p:nth-child(3) {
 					width: 100%;
 					color: #666666;
@@ -152,7 +181,7 @@
 					margin-bottom: 0.375rem;
 					line-height: 150%;
 				}
-
+		
 				div:last-child {
 					width: 100%;
 					margin-bottom: 0.5rem;
@@ -160,7 +189,7 @@
 					flex-direction: row;
 					justify-content: flex-end;
 					align-items: center;
-
+		
 					p {
 						color: #FFFFFF;
 						font-size: 0.75rem;
@@ -173,24 +202,6 @@
 				}
 			}
 		}
-		div.add-list {
-			width: 100%;
-			display: flex;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			margin: 1.375rem 0;
-		
-			p {
-				width: 21%;
-				padding: 0.5rem 0;
-				border-radius: 0.25rem;
-				color: rgba(133, 40, 51, 1);
-				font-size: 0.875rem;
-				text-align: center;
-				border: 0.0625rem solid rgba(133, 40, 51, 1);
-				cursor: pointer;
-			}
-		}
 	}
+}
 </style>

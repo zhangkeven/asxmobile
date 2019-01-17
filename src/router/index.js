@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Main from '@/pages/main'
+import StartProduct from '@/pages/startProduct/startProduct'
 import Room from '@/pages/room/room'
 import CompanyProfile from '@/pages/about/companyProfile'
 import CompanyIntroduction from '@/pages/about/companyIntroduction'
@@ -11,6 +12,7 @@ import Share from '@/pages/share/share'
 import Cart from '@/pages/cart/cart'
 import Person from '@/pages/personcenter/person'
 import Recommend from '@/pages/recommend/recommend'
+import RecommendDetail from '@/pages/recommend/recommendDetail'
 Vue.use(Router)
 
 export default new Router({
@@ -24,6 +26,15 @@ export default new Router({
 				content: 'disable'
 			}
     },
+	 {
+	  path: '/StartProduct',
+	  name: 'StartProduct',
+	  component: StartProduct,
+			meta: {
+				title: "明星产品",
+				content: 'disable'
+			}
+	},
 		{
 		  path: '/Room',
 		  name: 'Room',
@@ -114,5 +125,20 @@ export default new Router({
 				content: 'disable'
 			}
 		},
-  ]
+		{
+		  path: '/RecommendDetail',
+		  name: 'RecommendDetail',
+		  component: RecommendDetail,
+			meta: {
+				title: "推荐专栏详情",
+				content: 'disable'
+			}
+		},
+  ],
+  scrollBehavior(to, from,savedPosition) {
+    return {
+      x: 0,
+      y: 0
+    }
+  }
 })
