@@ -16,123 +16,72 @@ import RecommendDetail from '@/pages/recommend/recommendDetail'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
       name: 'Main',
-      component: Main,
-			meta: {
-				title: "阿莎希",
-				content: 'disable'
-			}
+      component: Main
     },
 	 {
 	  path: '/StartProduct',
 	  name: 'StartProduct',
-	  component: StartProduct,
-			meta: {
-				title: "明星产品",
-				content: 'disable'
-			}
+	  component: StartProduct
 	},
 		{
 		  path: '/Room',
 		  name: 'Room',
-		  component: Room,
-			meta: {
-				title: "料理教室",
-				content: 'disable'
-			}
+		  component: Room
 		},
 		{
 		  path: '/CompanyProfile',
 		  name: 'CompanyProfile',
-		  component: CompanyProfile,
-			meta: {
-				title: "公司简介",
-				content: 'disable'
-			}
+		  component: CompanyProfile
 		},
 		{
 		  path: '/CompanyIntroduction',
 		  name: 'CompanyIntroduction',
-		  component: CompanyIntroduction,
-			meta: {
-				title: "公司概要",
-				content: 'disable'
-			}
+		  component: CompanyIntroduction
 		},
 		{
 		  path: '/HistoricalEvents',
 		  name: 'HistoricalEvents',
-		  component: HistoricalEvents,
-			meta: {
-				title: "历史事件",
-				content: 'disable'
-			}
+		  component: HistoricalEvents
 		},
 		{
 		  path: '/NewCenter',
 		  name: 'NewCenter',
-		  component: NewCenter,
-			meta: {
-				title: "新闻中心",
-				content: 'disable'
-			}
+		  component: NewCenter
 		},
 		{
 		  path: '/CallUs',
 		  name: 'CallUs',
-		  component: CallUs,
-			meta: {
-				title: "联系我们",
-				content: 'disable'
-			}
+		  component: CallUs
 		},
 		{
 		  path: '/Share',
 		  name: 'Share',
-		  component: Share,
-			meta: {
-				title: "使用者分享",
-				content: 'disable'
-			}
+		  component: Share
 		},
 		{
 		  path: '/Cart',
 		  name: 'Cart',
-		  component: Cart,
-			meta: {
-				title: "购物车",
-				content: 'disable'
-			}
+		  component: Cart
 		},
 		{
 		  path: '/Person',
 		  name: 'Person',
-		  component: Share,
-			meta: {
-				title: "个人中心",
-				content: 'disable'
-			}
+		  component: Share
 		},
 		{
 		  path: '/Recommend',
 		  name: 'Recommend',
-		  component: Recommend,
-			meta: {
-				title: "推荐专栏",
-				content: 'disable'
-			}
+		  component: Recommend
 		},
 		{
 		  path: '/RecommendDetail',
 		  name: 'RecommendDetail',
-		  component: RecommendDetail,
-			meta: {
-				title: "推荐专栏详情",
-				content: 'disable'
-			}
+		  component: RecommendDetail
 		},
   ],
   scrollBehavior(to, from,savedPosition) {

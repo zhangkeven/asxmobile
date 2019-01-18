@@ -16,8 +16,11 @@
   "dependencies": {
     "better-scroll": "^1.13.4",
     "element-ui": "^2.4.11",
+    "install": "^0.12.2",
     "ly-tab": "^2.1.2",
+    "npm": "^6.6.0",
     "plugin": "^0.3.3",
+    "prerender-spa-plugin": "^3.4.0",
     "swiper": "^4.4.6",
     "vue": "^2.5.2",
     "vue-awesome-swiper": "^3.1.3",

@@ -31,7 +31,10 @@ new Vue({
   el: '#app',
   router,
   components: { App },
-  template: '<App/>'
+  template: '<App/>',
+  mounted () {
+    document.dispatchEvent(new Event('render-event'))
+  }
 })
 	//main.js里面的代码
   router.beforeEach((to, from, next) => {

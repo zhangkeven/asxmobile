@@ -104,6 +104,9 @@
 		},
 		data() {
 			return {
+				myTitle:'阿莎希官网',
+				title:'活力锅',
+				conent:'这是一家历史悠久的公司',
 				chooseId: 0,
 				selectedId: 0,
 				items: [{
@@ -155,6 +158,17 @@
 					status: 1
 				}, ]
 			};
+		},
+		 metaInfo (){
+			return{
+				titleTemplate: this.myTitle,
+				htmlAttrs: {
+					lang: 'zh'
+				},
+				
+				meta: [{  name: 'keywords' ,content:this.myTitle+','+this.title}],
+				meta: [{  name: 'description' ,content:this.conent}],
+			}
 		},
 		methods: {
 			onSwipeLeft() {},

@@ -35,6 +35,9 @@
 		},
 		data() {
 			return {
+					myTitle:'联系我们',
+					title:'活力锅',
+					conent:'这是一家历史悠久的公司',
 					imgs: ['', '', '', ''],
 					selectid:0,
 					items: [{
@@ -60,6 +63,17 @@
 					}
 				],
 			};
+		},
+		 metaInfo (){
+			return{
+				titleTemplate: this.myTitle,
+				htmlAttrs: {
+					lang: 'zh'
+				},
+				
+				meta: [{  name: 'keywords' ,content:this.myTitle+this.title}],
+				meta: [{  name: 'description' ,content:this.conent}],
+			}
 		},
 		updated(){
 			console.log(this.selectid);
