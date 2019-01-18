@@ -1,4 +1,4 @@
-﻿@charset "UTF-8";
+@charset "UTF-8";
 
 .el-input__suffix,
 .el-tree.is-dragging .el-tree-node__content * {
@@ -31,15 +31,15 @@
 }
 
 @font-face {
-  font-family: element-icons;
-  src: url(fonts/element-icons.woff) format("woff"), url(fonts/element-icons.ttf) format("truetype");
+  font-family: iconfont;
+  src: url(fonts/iconfont.woff) format("woff"), url(fonts/iconfont.ttf) format("truetype");
   font-weight: 400;
   font-style: normal
 }
 
 [class*=" el-icon-"],
 [class^=el-icon-] {
-  font-family: element-icons !important;
+  font-family: iconfont !important;
   speak: none;
   font-style: normal;
   font-weight: 400;
@@ -10915,7 +10915,7 @@
   transition: border-bottom-color .3s;
   outline: 0;
   box-sizing: border-box;
-}
+}  
 
 .el-collapse-item__arrow {
   margin: 0 8px 0 auto;
@@ -10923,12 +10923,13 @@
   transition: -webkit-transform .3s;
   transition: transform .3s;
   transition: transform .3s, -webkit-transform .3s;
-  font-weight: 300
+  font-weight: 300;
+	
 }
 
 .el-collapse-item__arrow.is-active {
   -webkit-transform: rotate(90deg);
-  transform: rotate(90deg)
+  transform: rotate(90deg);
 }
 
 .el-collapse-item__header.focusing:focus:not(:hover) {

@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import './assets/css/initial.css'
+import './assets/font/iconfont.ttf'
+import './assets/font/iconfont.woff'
+
 import ElementUI from 'element-ui'
 import './assets/theme-chalk/index.css'
 Vue.use(ElementUI)
@@ -11,6 +14,8 @@ import VueAwesomeSwiper from 'vue-awesome-swiper';
 Vue.use(VueAwesomeSwiper);
 import VueMeta from 'vue-meta'
 Vue.use(VueMeta)
+import Vuex from 'vuex'
+Vue.use(Vuex)
 import './assets/css/swiper.min.css';
 import './assets/js/swiper.js'
 import VueTouch from 'vue-touch'       
@@ -25,11 +30,15 @@ import recipes from './components/recipes';
 Vue.use(recipes);
 import LyTab from './components/ly-tab';
 Vue.use(LyTab);
+import leftBtn from './components/leftWindow';
+Vue.use(leftBtn);
+
 // require('swiper/dist/css/swiper.css')
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
+	// store,
   components: { App },
   template: '<App/>',
   mounted () {

@@ -1,20 +1,24 @@
 <template>
 	<div id="nav-main">
-		<div class="showMenu" :style="showModal">
-			<div>
-				<img src="../assets/img/shouye.png" alt="" @click="goMain">
+		<transition name="red">
+			<div class="showMenu" :style="showModal">
+				<div>
+					<img src="../assets/img/shouye.png" alt="" @click="goMain">
+				</div>
+				<div>
+					<img src="../assets/img/cart1.png" alt="">
+			
+				</div>
+				<div> <img src="../assets/img/kefu.png" alt=""></div>
+				<div> <img src="../assets/img/mine1.png" alt=""></div>
+				<div> <img src="../assets/img/right.png" alt="" @click="showMenu"></div>
 			</div>
-			<div>
-				<img src="../assets/img/cart1.png" alt="">
-
+		</transition>
+		<transition name="red">
+			<div class="hideMenu" :style="hideModal">
+				<img src="../assets/img/left.png" alt="" @click="hideMenu">
 			</div>
-			<div> <img src="../assets/img/kefu.png" alt=""></div>
-			<div> <img src="../assets/img/mine1.png" alt=""></div>
-			<div> <img src="../assets/img/right.png" alt="" @click="showMenu"></div>
-		</div>
-		<div class="hideMenu" :style="hideModal">
-			<img src="../assets/img/left.png" alt="" @click="hideMenu">
-		</div>
+		</transition>
 	</div>
 </template>
 
@@ -108,5 +112,23 @@
 				z-index: 21;
 			}
 		}
+	}
+		.red{
+	    width: 100%;
+	    /*下面的样式可以不写，这里为了方便理解*/
+	    opacity: 1;
+	}
+	.red-enter{
+	    opacity: 0.3;
+	}
+	.red-enter-active,.red-leave-active{
+	    transition: all 1s linear;
+	}
+	.red-leave{
+	    /*对于简单动画来说，[name]-leave也可以不写，多数情况下，此处的样式和元素正常显示是的样式是相同的*/
+	    opacity: 0.5;
+	}
+	.red-leave-active{
+	    opacity: 1;
 	}
 </style>

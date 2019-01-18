@@ -9,6 +9,7 @@ import HistoricalEvents from '@/pages/about/historicalEvents'
 import NewCenter from '@/pages/about/newCenter'
 import CallUs from '@/pages/about/callUs'
 import Share from '@/pages/share/share'
+import Buy from '@/pages/goshopping/buy'
 import Cart from '@/pages/cart/cart'
 import Person from '@/pages/personcenter/person'
 import Recommend from '@/pages/recommend/recommend'
@@ -62,6 +63,11 @@ export default new Router({
 		  path: '/Share',
 		  name: 'Share',
 		  component: Share
+		},
+		{
+		  path: '/Buy',
+		  name: 'Buy',
+		  component: Buy
 		},
 		{
 		  path: '/Cart',
